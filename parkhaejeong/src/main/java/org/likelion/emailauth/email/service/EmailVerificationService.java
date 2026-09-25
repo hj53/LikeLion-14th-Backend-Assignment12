@@ -71,8 +71,8 @@ public class EmailVerificationService {
         // 과제 : 인증번호를 대문자 영어 6자리 형태로 교체하기
         StringBuilder verificationCode = new StringBuilder();
 
-        for (int i = 0; i <= VERIFICATION_CODE_LENGTH; i ++ ) {
-            int index = secureRandom.nextInt(VERIFICATION_CODE_LENGTH);
+        for (int i = 0; i < VERIFICATION_CODE_LENGTH; i ++ ) {
+            int index = secureRandom.nextInt(VERIFICATION_CODE_CHARS.length());
             verificationCode.append(VERIFICATION_CODE_CHARS.charAt(index));
         }
 
